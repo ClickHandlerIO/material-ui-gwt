@@ -2,7 +2,7 @@ package io.clickhandler.materialUiGwt.client.styles;
 
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "Camber.MaterialUi.Styles")
+@JsType(isNative = true, namespace = "MaterialUi.Styles")
 public class Colors {
     public static String red50;
     public static String red100;

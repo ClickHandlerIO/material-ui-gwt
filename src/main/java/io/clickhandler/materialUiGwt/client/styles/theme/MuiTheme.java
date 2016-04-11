@@ -5,7 +5,7 @@ import jsinterop.annotations.JsType;
 
 @JsType(isNative = true)
 public class MuiTheme {
-    @JsMethod(namespace = "Camber.MaterialUi.Styles", name = "MuiTheme")
+    @JsMethod(namespace = "MaterialUi.Styles", name = "MuiTheme")
     public static native MuiTheme get();
 
     public boolean isRtl;

@@ -3,7 +3,7 @@ package io.clickhandler.materialUiGwt.client.utils;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, namespace = "Camber.MaterialUi.Utils")
+@JsType(isNative = true, namespace = "MaterialUi.Utils")
 public class ColorManipulator {
     @JsMethod
     public static native String fade(String color, double amount);
