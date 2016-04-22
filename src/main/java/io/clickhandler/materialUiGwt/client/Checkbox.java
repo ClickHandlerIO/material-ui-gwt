@@ -1,6 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
+import io.clickhandler.reactGwt.client.Reflection;
 import io.clickhandler.reactGwt.client.dom.CSSProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -187,7 +188,19 @@ public class Checkbox extends ExternalComponent<Checkbox.Props> {
 
         @JsOverlay
         default Props onCheck(final Func.Run onCheck) {
-            setOnCheck(onCheck);
+            Reflection.set(this, "onCheck", onCheck);
+            return this;
+        }
+
+        @JsOverlay
+        default Props onCheck(final Func.Run1<Object> onCheck) {
+            Reflection.set(this, "onCheck", onCheck);
+            return this;
+        }
+
+        @JsOverlay
+        default Props onCheck(final Func.Run2<Object, Object> onCheck) {
+            Reflection.set(this, "onCheck", onCheck);
             return this;
         }
     }

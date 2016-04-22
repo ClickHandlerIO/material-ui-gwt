@@ -4,6 +4,7 @@ import io.clickhandler.reactGwt.client.Func;
 import io.clickhandler.reactGwt.client.dom.CSSProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
+import io.clickhandler.reactGwt.client.event.SyntheticEvent;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -163,10 +164,10 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setOnBlur(FocusEventHandler onBlur);
 
         @JsProperty
-        Func.Run getOnChange();
+        Func.Run3<SyntheticEvent, Integer, Object> getOnChange();
 
         @JsProperty
-        void setOnChange(Func.Run onChange);
+        void setOnChange(Func.Run3<SyntheticEvent, Integer, Object> onChange);
 
         @JsProperty
         FocusEventHandler getOnFocus();
@@ -294,7 +295,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props onChange(final Func.Run onChange) {
+        default Props onChange(final Func.Run3<SyntheticEvent, Integer, Object> onChange) {
             setOnChange(onChange);
             return this;
         }
