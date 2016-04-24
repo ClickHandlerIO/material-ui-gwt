@@ -49,7 +49,7 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
 //
 //        public Func.Run DateTimeFormat; // func
 //        public Func.Run formatDate; // func
-//        public Func.Run onChange; // func
+//        public Func.Run onCheck; // func
 //        public Func.Run onDismiss; // func
 //        public FocusEventHandler onFocus; // func
 //        public Func.Run onShow; // func

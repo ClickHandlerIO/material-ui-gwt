@@ -1,7 +1,9 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
+import io.clickhandler.reactGwt.client.Reflection;
 import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.event.SyntheticEvent;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -35,7 +37,7 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
 //        String name; //
 //        CSSProps style;
 //        String valueSelected;
-//        Func.Run onChange; // func
+//        Func.Run onCheck; // func
 
 
         @JsProperty
@@ -127,6 +129,10 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
             return this;
         }
 
-
+        @JsOverlay
+        default Props onChange(final Func.Run2<SyntheticEvent, String> onChange) {
+            Reflection.set(this, "onCheck", onChange);
+            return this;
+        }
     }
 }

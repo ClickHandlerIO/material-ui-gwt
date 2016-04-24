@@ -36,7 +36,7 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
 //        boolean pedantic;
 //        CSSProps style; // ?
 //        CSSProps textFieldStyle; // ?
-//        Func.Run onChange; // func
+//        Func.Run onCheck; // func
 //        Func.Run onDismiss; // func
 //        FocusEventHandler onFocus; // func
 //        Func.Run onShow; // func

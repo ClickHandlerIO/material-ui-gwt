@@ -42,7 +42,7 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
 //        CSSProps style;
 //        CSSProps underlineStyle;
 //        Object value;
-//        Func.Run onChange; // func
+//        Func.Run onCheck; // func
 //        MouseEventHandler onClick; // func - added in, even though default opens and closes menu
 
         @JsProperty
