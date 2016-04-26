@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,18 +22,18 @@ public class LinearProgress extends ExternalComponent<LinearProgress.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.LinearProgress;
     }-*/;
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        String color;
-//        CSSProps innerStyle;
+//        StyleProps innerStyle;
 //        double max = 100; // only works in determinate mode
 //        double min = 0; // only works in determinate mode
 //        String mode = "indeterminate"; // enum 'determinate' 'indeterminate'(default)
-//        CSSProps style;
+//        StyleProps style;
 //        double value = 0; // only works in determinate mode
 
         @JsProperty
@@ -43,10 +43,10 @@ public class LinearProgress extends ExternalComponent<LinearProgress.Props> {
         void setColor(String color);
 
         @JsProperty
-        CSSProps getInnerStyle();
+        StyleProps getInnerStyle();
 
         @JsProperty
-        void setInnerStyle(CSSProps innerStyle);
+        void setInnerStyle(StyleProps innerStyle);
 
         @JsProperty
         double getMax();
@@ -67,10 +67,10 @@ public class LinearProgress extends ExternalComponent<LinearProgress.Props> {
         void setMode(String mode);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         double getValue();
@@ -90,7 +90,7 @@ public class LinearProgress extends ExternalComponent<LinearProgress.Props> {
         }
 
         @JsOverlay
-        default Props innerStyle(final CSSProps innerStyle) {
+        default Props innerStyle(final StyleProps innerStyle) {
             setInnerStyle(innerStyle);
             return this;
         }
@@ -114,7 +114,7 @@ public class LinearProgress extends ExternalComponent<LinearProgress.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

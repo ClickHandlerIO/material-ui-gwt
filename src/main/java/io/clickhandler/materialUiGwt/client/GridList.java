@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -25,7 +25,7 @@ public class GridList extends ExternalComponent<GridList.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.GridList;
     }-*/;
 
@@ -34,7 +34,7 @@ public class GridList extends ExternalComponent<GridList.Props> {
 //        double cellHeight; // default 180
 //        double cols; // 2
 //        double padding;
-//        CSSProps style; // ?
+//        StyleProps style; // ?
 
 
         @JsProperty
@@ -56,10 +56,10 @@ public class GridList extends ExternalComponent<GridList.Props> {
         void setPadding(double padding);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
 
         ////////////////////
@@ -85,7 +85,7 @@ public class GridList extends ExternalComponent<GridList.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

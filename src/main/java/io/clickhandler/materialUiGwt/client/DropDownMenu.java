@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -24,7 +24,7 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.DropDownMenu;
     }-*/;
 
@@ -34,13 +34,13 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
 //        boolean autoWidth;
 //        String className;
 //        boolean disabled;
-//        CSSProps iconStyle;
-//        CSSProps labelStyle;
+//        StyleProps iconStyle;
+//        StyleProps labelStyle;
 //        double maxHeight = 500;
-//        CSSProps menuStyle;
+//        StyleProps menuStyle;
 //        boolean openImmediately;
-//        CSSProps style;
-//        CSSProps underlineStyle;
+//        StyleProps style;
+//        StyleProps underlineStyle;
 //        Object value;
 //        Func.Run onChange; // func
 //        MouseEventHandler onClick; // func - added in, even though default opens and closes menu
@@ -64,16 +64,16 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         void setDisabled(boolean disabled);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
-        CSSProps getLabelStyle();
+        StyleProps getLabelStyle();
 
         @JsProperty
-        void setLabelStyle(CSSProps labelStyle);
+        void setLabelStyle(StyleProps labelStyle);
 
         @JsProperty
         double getMaxHeight();
@@ -82,10 +82,10 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         void setMaxHeight(double maxHeight);
 
         @JsProperty
-        CSSProps getMenuStyle();
+        StyleProps getMenuStyle();
 
         @JsProperty
-        void setMenuStyle(CSSProps menuStyle);
+        void setMenuStyle(StyleProps menuStyle);
 
         @JsProperty
         boolean isOpenImmediately();
@@ -94,16 +94,16 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         void setOpenImmediately(boolean openImmediately);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
-        CSSProps getUnderlineStyle();
+        StyleProps getUnderlineStyle();
 
         @JsProperty
-        void setUnderlineStyle(CSSProps underlineStyle);
+        void setUnderlineStyle(StyleProps underlineStyle);
 
         @JsProperty
         Object getValue();
@@ -147,13 +147,13 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         }
 
         @JsOverlay
-        default Props iconStyle(final CSSProps iconStyle) {
+        default Props iconStyle(final StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
 
         @JsOverlay
-        default Props labelStyle(final CSSProps labelStyle) {
+        default Props labelStyle(final StyleProps labelStyle) {
             setLabelStyle(labelStyle);
             return this;
         }
@@ -165,7 +165,7 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         }
 
         @JsOverlay
-        default Props menuStyle(final CSSProps menuStyle) {
+        default Props menuStyle(final StyleProps menuStyle) {
             setMenuStyle(menuStyle);
             return this;
         }
@@ -177,13 +177,13 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
 
         @JsOverlay
-        default Props underlineStyle(final CSSProps underlineStyle) {
+        default Props underlineStyle(final StyleProps underlineStyle) {
             setUnderlineStyle(underlineStyle);
             return this;
         }

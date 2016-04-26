@@ -2,7 +2,7 @@ package io.clickhandler.materialUiGwt.client;
 
 import com.google.gwt.core.client.JsDate;
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
@@ -24,7 +24,7 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TimePicker;
     }-*/;
 
@@ -34,8 +34,8 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
 //        String defaultTime;
 //        String format; // enum 'ampm '24hr'
 //        boolean pedantic;
-//        CSSProps style; // ?
-//        CSSProps textFieldStyle; // ?
+//        StyleProps style; // ?
+//        StyleProps textFieldStyle; // ?
 //        Func.Run onChange; // func
 //        Func.Run onDismiss; // func
 //        FocusEventHandler onFocus; // func
@@ -68,16 +68,16 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
         void setPedantic(boolean pedantic);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
-        CSSProps getTextFieldStyle();
+        StyleProps getTextFieldStyle();
 
         @JsProperty
-        void setTextFieldStyle(CSSProps textFieldStyle);
+        void setTextFieldStyle(StyleProps textFieldStyle);
 
         @JsProperty
         Func.Run2<Object, JsDate> getOnChange();
@@ -150,13 +150,13 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
 
         @JsOverlay
-        default Props textFieldStyle(final CSSProps textFieldStyle) {
+        default Props textFieldStyle(final StyleProps textFieldStyle) {
             setTextFieldStyle(textFieldStyle);
             return this;
         }

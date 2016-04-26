@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.KeyboardEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
@@ -27,7 +27,7 @@ public class IconMenu extends ExternalComponent<IconMenu.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.IconMenu;
     }-*/;
 
@@ -61,16 +61,16 @@ public class IconMenu extends ExternalComponent<IconMenu.Props> {
         void setIconButtonElement(ReactElement iconButtonElement);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
-        CSSProps getMenuStyle();
+        StyleProps getMenuStyle();
 
         @JsProperty
-        void setMenuStyle(CSSProps menuStyle);
+        void setMenuStyle(StyleProps menuStyle);
 
         @JsProperty
         TouchEventHandler getOnItemTouchTap();
@@ -127,10 +127,10 @@ public class IconMenu extends ExternalComponent<IconMenu.Props> {
         void setOpen(boolean open);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         Origin getTargetOrigin();
@@ -174,13 +174,13 @@ public class IconMenu extends ExternalComponent<IconMenu.Props> {
         }
 
         @JsOverlay
-        default Props iconStyle(CSSProps iconStyle) {
+        default Props iconStyle(StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
 
         @JsOverlay
-        default Props menuStyle(CSSProps menuStyle) {
+        default Props menuStyle(StyleProps menuStyle) {
             setMenuStyle(menuStyle);
             return this;
         }
@@ -240,7 +240,7 @@ public class IconMenu extends ExternalComponent<IconMenu.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

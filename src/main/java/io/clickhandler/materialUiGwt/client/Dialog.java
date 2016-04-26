@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -21,7 +21,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Dialog;
     }-*/;
 
@@ -43,10 +43,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setActionsContainerClassName(String actionsContainerClassName);
 
         @JsProperty
-        CSSProps getActionsContainerStyle();
+        StyleProps getActionsContainerStyle();
 
         @JsProperty
-        void setActionsContainerStyle(CSSProps actionsContainerStyle);
+        void setActionsContainerStyle(StyleProps actionsContainerStyle);
 
         @JsProperty
         boolean isAutoDetectWindowHeight();
@@ -67,10 +67,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setBodyClassName(String bodyClassName);
 
         @JsProperty
-        CSSProps getBodyStyle();
+        StyleProps getBodyStyle();
 
         @JsProperty
-        void setBodyStyle(CSSProps bodyStyle);
+        void setBodyStyle(StyleProps bodyStyle);
 
         @JsProperty
         String getClassName();
@@ -85,10 +85,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setContentClassName(String contentClassName);
 
         @JsProperty
-        CSSProps getContentStyle();
+        StyleProps getContentStyle();
 
         @JsProperty
-        void setContentStyle(CSSProps contentStyle);
+        void setContentStyle(StyleProps contentStyle);
 
         @JsProperty
         boolean isModal();
@@ -115,10 +115,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setOverlayClassName(String overlayClassName);
 
         @JsProperty
-        CSSProps getOverlayStyle();
+        StyleProps getOverlayStyle();
 
         @JsProperty
-        void setOverlayStyle(CSSProps overlayStyle);
+        void setOverlayStyle(StyleProps overlayStyle);
 
         @JsProperty
         boolean isRepositionOnUpdate();
@@ -127,10 +127,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setRepositionOnUpdate(boolean repositionOnUpdate);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getTitle();
@@ -145,10 +145,10 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         void setTitleClassName(String titleClassName);
 
         @JsProperty
-        CSSProps getTitleStyle();
+        StyleProps getTitleStyle();
 
         @JsProperty
-        void setTitleStyle(CSSProps titleStyle);
+        void setTitleStyle(StyleProps titleStyle);
 
 
         ////////////////////
@@ -169,7 +169,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props actionsContainerStyle(CSSProps actionsContainerStyle) {
+        default Props actionsContainerStyle(StyleProps actionsContainerStyle) {
             setActionsContainerStyle(actionsContainerStyle);
             return this;
         }
@@ -193,7 +193,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props bodyStyle(CSSProps bodyStyle) {
+        default Props bodyStyle(StyleProps bodyStyle) {
             setBodyStyle(bodyStyle);
             return this;
         }
@@ -211,7 +211,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props contentStyle(CSSProps contentStyle) {
+        default Props contentStyle(StyleProps contentStyle) {
             setContentStyle(contentStyle);
             return this;
         }
@@ -241,7 +241,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props overlayStyle(CSSProps overlayStyle) {
+        default Props overlayStyle(StyleProps overlayStyle) {
             setOverlayStyle(overlayStyle);
             return this;
         }
@@ -253,7 +253,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -271,7 +271,7 @@ public class Dialog extends ExternalComponent<Dialog.Props> {
         }
 
         @JsOverlay
-        default Props titleStyle(CSSProps titleStyle) {
+        default Props titleStyle(StyleProps titleStyle) {
             setTitleStyle(titleStyle);
             return this;
         }

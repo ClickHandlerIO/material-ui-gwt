@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -23,7 +23,7 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.RadioButtonGroup;
     }-*/;
 
@@ -33,7 +33,7 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
 //        String defaultSelected;
 //        String labelPosition; // enum 'left' 'right'
 //        String name; //
-//        CSSProps style;
+//        StyleProps style;
 //        String valueSelected;
 //        Func.Run onChange; // func
 
@@ -63,10 +63,10 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
         void setName(String name);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getValueSelected();
@@ -110,7 +110,7 @@ public class RadioButtonGroup extends ExternalComponent<RadioButtonGroup.Props> 
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

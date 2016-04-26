@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -24,7 +24,7 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Toggle;
     }-*/;
 
@@ -32,15 +32,15 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
     public interface Props extends BaseProps {
 //        boolean defaultToggled;
 //        boolean disabled;
-//        CSSProps elementStyle;
-//        CSSProps iconStyle;
+//        StyleProps elementStyle;
+//        StyleProps iconStyle;
 //        String labelPosition; // enum 'left' 'right' default left
-//        CSSProps labelStyle;
-//        CSSProps rippleStyle;
-//        CSSProps style;
+//        StyleProps labelStyle;
+//        StyleProps rippleStyle;
+//        StyleProps style;
 //        String thumbStyle;
 //        boolean toggled; // toggled if set to true
-//        CSSProps trackStyle;
+//        StyleProps trackStyle;
 //        String valueLink;
 //        Func.Run onToggle; // func
 //        MouseEventHandler onClick; // func added
@@ -59,16 +59,16 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         void setDisabled(boolean disabled);
 
         @JsProperty
-        CSSProps getElementStyle();
+        StyleProps getElementStyle();
 
         @JsProperty
-        void setElementStyle(CSSProps elementStyle);
+        void setElementStyle(StyleProps elementStyle);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
         String getLabelPosition();
@@ -77,22 +77,22 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         void setLabelPosition(String labelPosition);
 
         @JsProperty
-        CSSProps getLabelStyle();
+        StyleProps getLabelStyle();
 
         @JsProperty
-        void setLabelStyle(CSSProps labelStyle);
+        void setLabelStyle(StyleProps labelStyle);
 
         @JsProperty
-        CSSProps getRippleStyle();
+        StyleProps getRippleStyle();
 
         @JsProperty
-        void setRippleStyle(CSSProps rippleStyle);
+        void setRippleStyle(StyleProps rippleStyle);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getThumbStyle();
@@ -107,10 +107,10 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         void setToggled(boolean toggled);
 
         @JsProperty
-        CSSProps getTrackStyle();
+        StyleProps getTrackStyle();
 
         @JsProperty
-        void setTrackStyle(CSSProps trackStyle);
+        void setTrackStyle(StyleProps trackStyle);
 
         @JsProperty
         String getValueLink();
@@ -148,13 +148,13 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         }
 
         @JsOverlay
-        default Props elementStyle(final CSSProps elementStyle) {
+        default Props elementStyle(final StyleProps elementStyle) {
             setElementStyle(elementStyle);
             return this;
         }
 
         @JsOverlay
-        default Props iconStyle(final CSSProps iconStyle) {
+        default Props iconStyle(final StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
@@ -166,19 +166,19 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         }
 
         @JsOverlay
-        default Props labelStyle(final CSSProps labelStyle) {
+        default Props labelStyle(final StyleProps labelStyle) {
             setLabelStyle(labelStyle);
             return this;
         }
 
         @JsOverlay
-        default Props rippleStyle(final CSSProps rippleStyle) {
+        default Props rippleStyle(final StyleProps rippleStyle) {
             setRippleStyle(rippleStyle);
             return this;
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -196,7 +196,7 @@ public class Toggle extends ExternalComponent<Toggle.Props> {
         }
 
         @JsOverlay
-        default Props trackStyle(final CSSProps trackStyle) {
+        default Props trackStyle(final StyleProps trackStyle) {
             setTrackStyle(trackStyle);
             return this;
         }

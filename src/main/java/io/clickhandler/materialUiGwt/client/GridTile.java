@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.*;
 import jsinterop.annotations.JsOverlay;
@@ -24,7 +24,7 @@ public class GridTile extends ExternalComponent<GridTile.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.GridTile;
     }-*/;
 
@@ -35,7 +35,7 @@ public class GridTile extends ExternalComponent<GridTile.Props> {
 //        double cols; // 1
 //        ReactComponent rootClass; // union type: default 'div' - per documentation... either a string used as a tag name for the tile root element, or a ReactComponent
 //        double rows;  // 1
-//        CSSProps style; // ?
+//        StyleProps style; // ?
 //        ReactElement title;
 //        ReactElement subtitle;
 //        String titleBackground; // default 'rgba(0, 0, 0, 0.4)' - white
@@ -74,10 +74,10 @@ public class GridTile extends ExternalComponent<GridTile.Props> {
         void setRows(double rows);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         ReactElement getTitle();
@@ -145,7 +145,7 @@ public class GridTile extends ExternalComponent<GridTile.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

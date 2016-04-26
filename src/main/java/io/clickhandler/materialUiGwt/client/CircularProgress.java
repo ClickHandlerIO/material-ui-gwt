@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,7 +22,7 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.CircularProgress;
     }-*/;
 
@@ -30,12 +30,12 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        String color;
-//        CSSProps innerStyle;
+//        StyleProps innerStyle;
 //        double max = 100; // only works in determinate mode
 //        double min = 0; // only works in determinate mode
 //        String mode = "indeterminate"; // enum 'determinate' 'indeterminate'(default)
 //        double size = 1; // size of progress
-//        CSSProps style;
+//        StyleProps style;
 //        double value = 0; // only works in determinate mode
 
         @JsProperty
@@ -45,10 +45,10 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
         void setColor(String color);
 
         @JsProperty
-        CSSProps getInnerStyle();
+        StyleProps getInnerStyle();
 
         @JsProperty
-        void setInnerStyle(CSSProps innerStyle);
+        void setInnerStyle(StyleProps innerStyle);
 
         @JsProperty
         double getMax();
@@ -75,10 +75,10 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
         void setSize(double size);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         double getValue();
@@ -98,7 +98,7 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
         }
 
         @JsOverlay
-        default Props innerStyle(final CSSProps innerStyle) {
+        default Props innerStyle(final StyleProps innerStyle) {
             setInnerStyle(innerStyle);
             return this;
         }
@@ -128,7 +128,7 @@ public class CircularProgress extends ExternalComponent<CircularProgress.Props> 
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

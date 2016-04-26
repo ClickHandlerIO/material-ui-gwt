@@ -7,10 +7,9 @@ import jsinterop.annotations.JsType;
 public abstract class AbstractMaterialIcon extends ExternalComponent<AbstractMaterialIcon.Props> {
 
     @Override
-    protected Props defaultProps() {
-        final Props props = super.defaultProps();
+    protected void applyDefaults(Props props) {
+        super.applyDefaults(props);
         props.setViewBox("0 0 24 24");
-        return props;
     }
 
     @JsType(isNative = true)

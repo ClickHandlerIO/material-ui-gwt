@@ -12,7 +12,7 @@ public class CheckCircleSvgIcon extends AbstractMaterialIcon {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Icons.CheckCircle;
     }-*/;
 }

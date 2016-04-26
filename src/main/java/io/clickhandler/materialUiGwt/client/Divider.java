@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -21,7 +21,7 @@ public class Divider extends ExternalComponent<Divider.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Divider;
     }-*/;
 
@@ -49,10 +49,10 @@ public class Divider extends ExternalComponent<Divider.Props> {
         void setMuiTheme(Object muiTheme);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
 
         ////////////////////
@@ -78,7 +78,7 @@ public class Divider extends ExternalComponent<Divider.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

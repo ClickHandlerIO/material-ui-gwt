@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.SyntheticEvent;
@@ -27,7 +27,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.SelectField;
     }-*/;
 
@@ -35,17 +35,17 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
     public interface Props extends BaseProps {
 //        boolean autoWidth;
 //        boolean disabled;
-//        CSSProps errorStyle;
+//        StyleProps errorStyle;
 //        ReactElement errorText; // node
-//        CSSProps floatingLabelStyle;
+//        StyleProps floatingLabelStyle;
 //        ReactElement floatingLabelText;
 //        boolean fullWidth;
-//        CSSProps hintStyle;
+//        StyleProps hintStyle;
 //        ReactElement hintText;
-//        CSSProps iconStyle;
-//        CSSProps labelStyle;
+//        StyleProps iconStyle;
+//        StyleProps labelStyle;
 //        String selectFieldRoot; // ?
-//        CSSProps style;
+//        StyleProps style;
 //        String underlineDisabledStyle;
 //        String underlineFocusStyle;
 //        String underlineStyle;
@@ -68,10 +68,10 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setDisabled(boolean disabled);
 
         @JsProperty
-        CSSProps getErrorStyle();
+        StyleProps getErrorStyle();
 
         @JsProperty
-        void setErrorStyle(CSSProps errorStyle);
+        void setErrorStyle(StyleProps errorStyle);
 
         @JsProperty
         ReactElement getErrorText();
@@ -80,10 +80,10 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setErrorText(ReactElement errorText);
 
         @JsProperty
-        CSSProps getFloatingLabelStyle();
+        StyleProps getFloatingLabelStyle();
 
         @JsProperty
-        void setFloatingLabelStyle(CSSProps floatingLabelStyle);
+        void setFloatingLabelStyle(StyleProps floatingLabelStyle);
 
         @JsProperty
         ReactElement getFloatingLabelText();
@@ -98,10 +98,10 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setFullWidth(boolean fullWidth);
 
         @JsProperty
-        CSSProps getHintStyle();
+        StyleProps getHintStyle();
 
         @JsProperty
-        void setHintStyle(CSSProps hintStyle);
+        void setHintStyle(StyleProps hintStyle);
 
         @JsProperty
         ReactElement getHintText();
@@ -110,16 +110,16 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setHintText(ReactElement hintText);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
-        CSSProps getLabelStyle();
+        StyleProps getLabelStyle();
 
         @JsProperty
-        void setLabelStyle(CSSProps labelStyle);
+        void setLabelStyle(StyleProps labelStyle);
 
         @JsProperty
         String getSelectFieldRoot();
@@ -128,10 +128,10 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         void setSelectFieldRoot(String selectFieldRoot);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getUnderlineDisabledStyle();
@@ -199,7 +199,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props errorStyle(final CSSProps errorStyle) {
+        default Props errorStyle(final StyleProps errorStyle) {
             setErrorStyle(errorStyle);
             return this;
         }
@@ -211,7 +211,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props floatingLabelStyle(final CSSProps floatingLabelStyle) {
+        default Props floatingLabelStyle(final StyleProps floatingLabelStyle) {
             setFloatingLabelStyle(floatingLabelStyle);
             return this;
         }
@@ -229,7 +229,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props hintStyle(final CSSProps hintStyle) {
+        default Props hintStyle(final StyleProps hintStyle) {
             setHintStyle(hintStyle);
             return this;
         }
@@ -241,13 +241,13 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props iconStyle(final CSSProps iconStyle) {
+        default Props iconStyle(final StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
 
         @JsOverlay
-        default Props labelStyle(final CSSProps labelStyle) {
+        default Props labelStyle(final StyleProps labelStyle) {
             setLabelStyle(labelStyle);
             return this;
         }
@@ -259,7 +259,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

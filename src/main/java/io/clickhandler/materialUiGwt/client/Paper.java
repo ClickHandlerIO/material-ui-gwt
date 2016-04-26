@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Reflection;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -20,7 +20,7 @@ public class Paper extends ExternalComponent<Paper.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Paper;
     }-*/;
 
@@ -42,10 +42,10 @@ public class Paper extends ExternalComponent<Paper.Props> {
         void setRounded(boolean rounded);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         boolean isTransitionEnabled();
@@ -79,7 +79,7 @@ public class Paper extends ExternalComponent<Paper.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

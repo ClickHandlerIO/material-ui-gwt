@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,7 +22,7 @@ public class RefreshIndicator extends ExternalComponent<RefreshIndicator.Props> 
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.RefreshIndicator;
     }-*/;
 
@@ -34,7 +34,7 @@ public class RefreshIndicator extends ExternalComponent<RefreshIndicator.Props> 
 //        double percentage = 0; // max is 100
 //        double size = 40; // size in pixels
 //        String status = "hide"; // enum 'ready' 'loading' 'hide'
-//        CSSProps style;
+//        StyleProps style;
 //        double top; // the absolute top position of the indicator in pixels
 //        // leaving out onClick, unless we want is to be an attempted interrupt or something, sounds a little odd though
 
@@ -75,10 +75,10 @@ public class RefreshIndicator extends ExternalComponent<RefreshIndicator.Props> 
         void setStatus(String status);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         double getTop();
@@ -128,7 +128,7 @@ public class RefreshIndicator extends ExternalComponent<RefreshIndicator.Props> 
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

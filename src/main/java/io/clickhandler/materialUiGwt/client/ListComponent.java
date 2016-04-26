@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -23,7 +23,7 @@ public class ListComponent extends ExternalComponent<ListComponent.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.List;
     }-*/;
 
@@ -39,10 +39,10 @@ public class ListComponent extends ExternalComponent<ListComponent.Props> {
         void setInsetSubheader(boolean insetSubheader);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         ReactElement getSubheader();
@@ -74,7 +74,7 @@ public class ListComponent extends ExternalComponent<ListComponent.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

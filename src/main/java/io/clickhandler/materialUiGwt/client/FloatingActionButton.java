@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -21,7 +21,7 @@ public class FloatingActionButton extends ExternalComponent<FloatingActionButton
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.FloatingActionButton;
     }-*/;
 
@@ -58,10 +58,10 @@ public class FloatingActionButton extends ExternalComponent<FloatingActionButton
         void setIconClassName(String iconClassName);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
         boolean isLinkButton();
@@ -124,10 +124,10 @@ public class FloatingActionButton extends ExternalComponent<FloatingActionButton
         void setSecondary(boolean secondary);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
 
         ////////////////////
@@ -165,7 +165,7 @@ public class FloatingActionButton extends ExternalComponent<FloatingActionButton
         }
 
         @JsOverlay
-        default Props iconStyle(final CSSProps iconStyle) {
+        default Props iconStyle(final StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
@@ -231,7 +231,7 @@ public class FloatingActionButton extends ExternalComponent<FloatingActionButton
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

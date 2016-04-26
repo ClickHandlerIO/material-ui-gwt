@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -24,7 +24,7 @@ public class TableHeader extends ExternalComponent<TableHeader.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TableHeader;
     }-*/;
 
@@ -35,7 +35,7 @@ public class TableHeader extends ExternalComponent<TableHeader.Props> {
 //        boolean displaySelectAll = true;
 //        boolean enableSelectAll = true;
 //        boolean selectAllSelected;
-//        CSSProps style;
+//        StyleProps style;
 //        Func.Run onSelectAll; // func
 //        MouseEventHandler onClick;
 
@@ -70,10 +70,10 @@ public class TableHeader extends ExternalComponent<TableHeader.Props> {
         void setSelectAllSelected(boolean selectAllSelected);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         Func.Run getOnSelectAll();
@@ -123,7 +123,7 @@ public class TableHeader extends ExternalComponent<TableHeader.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

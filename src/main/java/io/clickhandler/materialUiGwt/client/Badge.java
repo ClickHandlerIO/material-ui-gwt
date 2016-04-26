@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -20,7 +20,7 @@ public class Badge extends ExternalComponent<Badge.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Badge;
     }-*/;
 
@@ -36,10 +36,10 @@ public class Badge extends ExternalComponent<Badge.Props> {
         void setBadgeContent(ReactElement badgeContent);
 
         @JsProperty
-        CSSProps getBadgeStyle();
+        StyleProps getBadgeStyle();
 
         @JsProperty
-        void setBadgeStyle(CSSProps badgeStyle);
+        void setBadgeStyle(StyleProps badgeStyle);
 
         @JsProperty
         String getClassName();
@@ -60,10 +60,10 @@ public class Badge extends ExternalComponent<Badge.Props> {
         void setSecondary(boolean secondary);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -80,7 +80,7 @@ public class Badge extends ExternalComponent<Badge.Props> {
         }
 
         @JsOverlay
-        default Props badgeStyle(CSSProps badgeStyle) {
+        default Props badgeStyle(StyleProps badgeStyle) {
             setBadgeStyle(badgeStyle);
             return this;
         }
@@ -104,7 +104,7 @@ public class Badge extends ExternalComponent<Badge.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

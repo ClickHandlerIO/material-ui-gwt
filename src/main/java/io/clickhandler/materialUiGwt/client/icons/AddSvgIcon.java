@@ -12,7 +12,7 @@ public class AddSvgIcon extends AbstractMaterialIcon {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Icons.Add;
     }-*/;
 }

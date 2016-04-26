@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.FormEventHandler;
 import io.clickhandler.reactGwt.client.event.KeyboardEventHandler;
@@ -25,7 +25,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TextField;
     }-*/;
 
@@ -53,10 +53,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setDisabled(boolean disabled);
 
         @JsProperty
-        CSSProps getErrorStyle();
+        StyleProps getErrorStyle();
 
         @JsProperty
-        void setErrorStyle(CSSProps errorStyle);
+        void setErrorStyle(StyleProps errorStyle);
 
         @JsProperty
         String getErrorText();
@@ -65,10 +65,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setErrorText(String errorText);
 
         @JsProperty
-        CSSProps getFloatingLabelStyle();
+        StyleProps getFloatingLabelStyle();
 
         @JsProperty
-        void setFloatingLabelStyle(CSSProps floatingLabelStyle);
+        void setFloatingLabelStyle(StyleProps floatingLabelStyle);
 
         @JsProperty
         String getFloatingLabelText();
@@ -83,10 +83,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setFullWidth(boolean fullWidth);
 
         @JsProperty
-        CSSProps getHintStyle();
+        StyleProps getHintStyle();
 
         @JsProperty
-        void setHintStyle(CSSProps hintStyle);
+        void setHintStyle(StyleProps hintStyle);
 
         @JsProperty
         String getHintText();
@@ -101,10 +101,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setId(String id);
 
         @JsProperty
-        CSSProps getInputStyle();
+        StyleProps getInputStyle();
 
         @JsProperty
-        void setInputStyle(CSSProps inputStyle);
+        void setInputStyle(StyleProps inputStyle);
 
         @JsProperty
         boolean isMultiLine();
@@ -155,10 +155,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setRowsMax(double rowsMax);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getType();
@@ -167,16 +167,16 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setType(String type);
 
         @JsProperty
-        CSSProps getUnderlineDisabledStyle();
+        StyleProps getUnderlineDisabledStyle();
 
         @JsProperty
-        void setUnderlineDisabledStyle(CSSProps underlineDisabledStyle);
+        void setUnderlineDisabledStyle(StyleProps underlineDisabledStyle);
 
         @JsProperty
-        CSSProps getUnderlineFocusStyle();
+        StyleProps getUnderlineFocusStyle();
 
         @JsProperty
-        void setUnderlineFocusStyle(CSSProps underlineFocusStyle);
+        void setUnderlineFocusStyle(StyleProps underlineFocusStyle);
 
         @JsProperty
         boolean isUnderlineShow();
@@ -185,10 +185,10 @@ public class TextField extends ExternalComponent<TextField.Props> {
         void setUnderlineShow(boolean underlineShow);
 
         @JsProperty
-        CSSProps getUnderlineStyle();
+        StyleProps getUnderlineStyle();
 
         @JsProperty
-        void setUnderlineStyle(CSSProps underlineStyle);
+        void setUnderlineStyle(StyleProps underlineStyle);
 
         @JsProperty
         Object getValue();
@@ -220,7 +220,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props errorStyle(CSSProps errorStyle) {
+        default Props errorStyle(StyleProps errorStyle) {
             setErrorStyle(errorStyle);
             return this;
         }
@@ -232,7 +232,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props floatingLabelStyle(CSSProps floatingLabelStyle) {
+        default Props floatingLabelStyle(StyleProps floatingLabelStyle) {
             setFloatingLabelStyle(floatingLabelStyle);
             return this;
         }
@@ -250,7 +250,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props hintStyle(CSSProps hintStyle) {
+        default Props hintStyle(StyleProps hintStyle) {
             setHintStyle(hintStyle);
             return this;
         }
@@ -268,7 +268,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props inputStyle(CSSProps inputStyle) {
+        default Props inputStyle(StyleProps inputStyle) {
             setInputStyle(inputStyle);
             return this;
         }
@@ -322,7 +322,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -334,13 +334,13 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props underlineDisabledStyle(CSSProps underlineDisabledStyle) {
+        default Props underlineDisabledStyle(StyleProps underlineDisabledStyle) {
             setUnderlineDisabledStyle(underlineDisabledStyle);
             return this;
         }
 
         @JsOverlay
-        default Props underlineFocusStyle(CSSProps underlineFocusStyle) {
+        default Props underlineFocusStyle(StyleProps underlineFocusStyle) {
             setUnderlineFocusStyle(underlineFocusStyle);
             return this;
         }
@@ -352,7 +352,7 @@ public class TextField extends ExternalComponent<TextField.Props> {
         }
 
         @JsOverlay
-        default Props underlineStyle(CSSProps underlineStyle) {
+        default Props underlineStyle(StyleProps underlineStyle) {
             setUnderlineStyle(underlineStyle);
             return this;
         }

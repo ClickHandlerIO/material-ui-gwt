@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.KeyboardEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -24,7 +24,7 @@ public class Menu extends ExternalComponent<Menu.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Menu;
     }-*/;
 
@@ -58,10 +58,10 @@ public class Menu extends ExternalComponent<Menu.Props> {
         void setInitiallyKeyboardFocused(boolean initiallyKeyboardFocused);
 
         @JsProperty
-        CSSProps getListStyle();
+        StyleProps getListStyle();
 
         @JsProperty
-        void setListStyle(CSSProps listStyle);
+        void setListStyle(StyleProps listStyle);
 
         @JsProperty
         Integer getMaxHeight();
@@ -106,16 +106,16 @@ public class Menu extends ExternalComponent<Menu.Props> {
         void setOpenDirection(String openDirection);
 
         @JsProperty
-        CSSProps getSelectedMenuItemStyle();
+        StyleProps getSelectedMenuItemStyle();
 
         @JsProperty
-        void setSelectedMenuItemStyle(CSSProps selectedMenuItemStyle);
+        void setSelectedMenuItemStyle(StyleProps selectedMenuItemStyle);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         Object getValue();
@@ -177,7 +177,7 @@ public class Menu extends ExternalComponent<Menu.Props> {
         }
 
         @JsOverlay
-        default Props listStyle(CSSProps listStyle) {
+        default Props listStyle(StyleProps listStyle) {
             setListStyle(listStyle);
             return this;
         }
@@ -225,13 +225,13 @@ public class Menu extends ExternalComponent<Menu.Props> {
         }
 
         @JsOverlay
-        default Props selectedMenuItemStyle(CSSProps selectedMenuItemStyle) {
+        default Props selectedMenuItemStyle(StyleProps selectedMenuItemStyle) {
             setSelectedMenuItemStyle(selectedMenuItemStyle);
             return this;
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

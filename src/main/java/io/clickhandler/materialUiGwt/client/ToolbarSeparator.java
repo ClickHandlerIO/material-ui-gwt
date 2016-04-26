@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,14 +22,14 @@ public class ToolbarSeparator extends ExternalComponent<ToolbarSeparator.Props> 
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.ToolbarSeparator;
     }-*/;
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        String className;
-//        CSSProps style;
+//        StyleProps style;
 //        // no onClick here either
 
 
@@ -40,10 +40,10 @@ public class ToolbarSeparator extends ExternalComponent<ToolbarSeparator.Props> 
         void setClassName(String className);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         ////////////////////
         // fluent setters
@@ -56,7 +56,7 @@ public class ToolbarSeparator extends ExternalComponent<ToolbarSeparator.Props> 
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

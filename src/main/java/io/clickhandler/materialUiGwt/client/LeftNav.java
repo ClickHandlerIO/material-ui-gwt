@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -20,7 +20,7 @@ public class LeftNav extends ExternalComponent<LeftNav.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.LeftNav;
     }-*/;
 
@@ -66,16 +66,16 @@ public class LeftNav extends ExternalComponent<LeftNav.Props> {
         void setOverlayClassName(String overlayClassName);
 
         @JsProperty
-        CSSProps getOverlayStyle();
+        StyleProps getOverlayStyle();
 
         @JsProperty
-        void setOverlayStyle(CSSProps overlayStyle);
+        void setOverlayStyle(StyleProps overlayStyle);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         double getSwipeAreaWidth();
@@ -137,13 +137,13 @@ public class LeftNav extends ExternalComponent<LeftNav.Props> {
         }
 
         @JsOverlay
-        default Props overlayStyle(CSSProps overlayStyle) {
+        default Props overlayStyle(StyleProps overlayStyle) {
             setOverlayStyle(overlayStyle);
             return this;
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

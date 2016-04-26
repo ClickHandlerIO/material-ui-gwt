@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -23,7 +23,7 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.RadioButton;
     }-*/;
 
@@ -31,10 +31,10 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
     public interface Props extends BaseProps {
 //        boolean checked;
 //        boolean disabled;
-//        CSSProps iconStyle;
+//        StyleProps iconStyle;
 //        String labelPosition; // enum 'left' 'right'
-//        CSSProps labelStyle;
-//        CSSProps style;
+//        StyleProps labelStyle;
+//        StyleProps style;
 //        String value;
 //        Func.Run onCheck; // func
 
@@ -52,10 +52,10 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
         void setDisabled(boolean disabled);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
         String getLabelPosition();
@@ -64,16 +64,16 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
         void setLabelPosition(String labelPosition);
 
         @JsProperty
-        CSSProps getLabelStyle();
+        StyleProps getLabelStyle();
 
         @JsProperty
-        void setLabelStyle(CSSProps labelStyle);
+        void setLabelStyle(StyleProps labelStyle);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getValue();
@@ -105,7 +105,7 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
         }
 
         @JsOverlay
-        default Props iconStyle(final CSSProps iconStyle) {
+        default Props iconStyle(final StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
@@ -117,13 +117,13 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
         }
 
         @JsOverlay
-        default Props labelStyle(final CSSProps labelStyle) {
+        default Props labelStyle(final StyleProps labelStyle) {
             setLabelStyle(labelStyle);
             return this;
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -31,7 +31,7 @@ public class CardMedia extends ExternalComponent<CardMedia.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.CardMedia;
     }-*/;
 
@@ -51,10 +51,10 @@ public class CardMedia extends ExternalComponent<CardMedia.Props> {
         void setExpandable(boolean expandable);
 
         @JsProperty
-        CSSProps getMediaStyle();
+        StyleProps getMediaStyle();
 
         @JsProperty
-        void setMediaStyle(CSSProps mediaStyle);
+        void setMediaStyle(StyleProps mediaStyle);
 
         @JsProperty
         ReactElement getOverlay();
@@ -63,28 +63,28 @@ public class CardMedia extends ExternalComponent<CardMedia.Props> {
         void setOverlay(ReactElement overlay);
 
         @JsProperty
-        CSSProps getOverlayContainerStyle();
+        StyleProps getOverlayContainerStyle();
 
         @JsProperty
-        void setOverlayContainerStyle(CSSProps overlayContainerStyle);
+        void setOverlayContainerStyle(StyleProps overlayContainerStyle);
 
         @JsProperty
-        CSSProps getOverlayContentStyle();
+        StyleProps getOverlayContentStyle();
 
         @JsProperty
-        void setOverlayContentStyle(CSSProps overlayContentStyle);
+        void setOverlayContentStyle(StyleProps overlayContentStyle);
 
         @JsProperty
-        CSSProps getOverlayStyle();
+        StyleProps getOverlayStyle();
 
         @JsProperty
-        void setOverlayStyle(CSSProps overlayStyle);
+        void setOverlayStyle(StyleProps overlayStyle);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -110,7 +110,7 @@ public class CardMedia extends ExternalComponent<CardMedia.Props> {
         }
 
         @JsOverlay
-        default Props mediaStyle(final CSSProps mediaStyle) {
+        default Props mediaStyle(final StyleProps mediaStyle) {
             setMediaStyle(mediaStyle);
             return this;
         }
@@ -122,25 +122,25 @@ public class CardMedia extends ExternalComponent<CardMedia.Props> {
         }
 
         @JsOverlay
-        default Props overlayContainerStyle(final CSSProps overlayContainerStyle) {
+        default Props overlayContainerStyle(final StyleProps overlayContainerStyle) {
             setOverlayContainerStyle(overlayContainerStyle);
             return this;
         }
 
         @JsOverlay
-        default Props overlayContentStyle(final CSSProps overlayContentStyle) {
+        default Props overlayContentStyle(final StyleProps overlayContentStyle) {
             setOverlayContentStyle(overlayContentStyle);
             return this;
         }
 
         @JsOverlay
-        default Props overlayStyle(final CSSProps overlayStyle) {
+        default Props overlayStyle(final StyleProps overlayStyle) {
             setOverlayStyle(overlayStyle);
             return this;
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

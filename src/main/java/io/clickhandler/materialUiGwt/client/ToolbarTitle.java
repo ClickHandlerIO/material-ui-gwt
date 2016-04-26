@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -23,14 +23,14 @@ public class ToolbarTitle extends ExternalComponent<ToolbarTitle.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.ToolbarTitle;
     }-*/;
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        String className;
-//        CSSProps style;
+//        StyleProps style;
 //        String text; // text to be displayed in title
 //        MouseEventHandler onClick;
 
@@ -41,10 +41,10 @@ public class ToolbarTitle extends ExternalComponent<ToolbarTitle.Props> {
         void setClassName(String className);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getText();
@@ -70,7 +70,7 @@ public class ToolbarTitle extends ExternalComponent<ToolbarTitle.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

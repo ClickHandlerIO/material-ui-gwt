@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -25,7 +25,7 @@ public class Popover extends ExternalComponent<Popover.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Popover;
     }-*/;
 
@@ -39,7 +39,7 @@ public class Popover extends ExternalComponent<Popover.Props> {
 //        boolean canAutoPosition = true;
 //        String className;
 //        boolean open;
-//        CSSProps style; // ? default { overflowY: 'auto',}
+//        StyleProps style; // ? default { overflowY: 'auto',}
 //        boolean userLayerForClickAway;
 //        double zDepth; // ? type = PropTypes.zDepth, default 1
 //        Func.Run animation; // func
@@ -96,10 +96,10 @@ public class Popover extends ExternalComponent<Popover.Props> {
         void setOpen(boolean open);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         boolean isUserLayerForClickAway();
@@ -185,7 +185,7 @@ public class Popover extends ExternalComponent<Popover.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

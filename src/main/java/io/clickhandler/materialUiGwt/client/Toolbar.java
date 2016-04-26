@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,7 +22,7 @@ public class Toolbar extends ExternalComponent<Toolbar.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Toolbar;
     }-*/;
 
@@ -30,7 +30,7 @@ public class Toolbar extends ExternalComponent<Toolbar.Props> {
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        String className;
-//        CSSProps style;
+//        StyleProps style;
 //        boolean noGutter; // spacing of toolbar
         // leaving out on click in favor of components that make this up
 
@@ -42,10 +42,10 @@ public class Toolbar extends ExternalComponent<Toolbar.Props> {
         void setClassName(String className);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         boolean isNoGutter();
@@ -65,7 +65,7 @@ public class Toolbar extends ExternalComponent<Toolbar.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

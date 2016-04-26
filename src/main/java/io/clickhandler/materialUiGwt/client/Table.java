@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -24,24 +24,24 @@ public class Table extends ExternalComponent<Table.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Table;
     }-*/;
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
 //        boolean allRowsSelected;
-//        CSSProps bodyStyle;
+//        StyleProps bodyStyle;
 //        String className;
 //        boolean fixedFooter = true;
 //        boolean fixedHeader = true;
-//        CSSProps footerStyle;
-//        CSSProps headerStyle;
+//        StyleProps footerStyle;
+//        StyleProps headerStyle;
 //        String height; // defaults to inherit
 //        boolean multiSelectable;
 //        boolean selectable;
-//        CSSProps style;
-//        CSSProps wrapperStyle;
+//        StyleProps style;
+//        StyleProps wrapperStyle;
 //        MouseEventHandler onCellClick; // func - works in place of onClick
 //        MouseEventHandler onCellHover; // func
 //        MouseEventHandler onCellHoverExit; // func
@@ -57,10 +57,10 @@ public class Table extends ExternalComponent<Table.Props> {
         void setAllRowsSelected(boolean allRowsSelected);
 
         @JsProperty
-        CSSProps getBodyStyle();
+        StyleProps getBodyStyle();
 
         @JsProperty
-        void setBodyStyle(CSSProps bodyStyle);
+        void setBodyStyle(StyleProps bodyStyle);
 
         @JsProperty
         String getClassName();
@@ -81,16 +81,16 @@ public class Table extends ExternalComponent<Table.Props> {
         void setFixedHeader(boolean fixedHeader);
 
         @JsProperty
-        CSSProps getFooterStyle();
+        StyleProps getFooterStyle();
 
         @JsProperty
-        void setFooterStyle(CSSProps footerStyle);
+        void setFooterStyle(StyleProps footerStyle);
 
         @JsProperty
-        CSSProps getHeaderStyle();
+        StyleProps getHeaderStyle();
 
         @JsProperty
-        void setHeaderStyle(CSSProps headerStyle);
+        void setHeaderStyle(StyleProps headerStyle);
 
         @JsProperty
         String getHeight();
@@ -111,16 +111,16 @@ public class Table extends ExternalComponent<Table.Props> {
         void setSelectable(boolean selectable);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
-        CSSProps getWrapperStyle();
+        StyleProps getWrapperStyle();
 
         @JsProperty
-        void setWrapperStyle(CSSProps wrapperStyle);
+        void setWrapperStyle(StyleProps wrapperStyle);
 
         @JsProperty
         MouseEventHandler getOnCellClick();
@@ -170,7 +170,7 @@ public class Table extends ExternalComponent<Table.Props> {
         }
 
         @JsOverlay
-        default Props bodyStyle(final CSSProps bodyStyle) {
+        default Props bodyStyle(final StyleProps bodyStyle) {
             setBodyStyle(bodyStyle);
             return this;
         }
@@ -194,13 +194,13 @@ public class Table extends ExternalComponent<Table.Props> {
         }
 
         @JsOverlay
-        default Props footerStyle(final CSSProps footerStyle) {
+        default Props footerStyle(final StyleProps footerStyle) {
             setFooterStyle(footerStyle);
             return this;
         }
 
         @JsOverlay
-        default Props headerStyle(final CSSProps headerStyle) {
+        default Props headerStyle(final StyleProps headerStyle) {
             setHeaderStyle(headerStyle);
             return this;
         }
@@ -224,13 +224,13 @@ public class Table extends ExternalComponent<Table.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
 
         @JsOverlay
-        default Props wrapperStyle(final CSSProps wrapperStyle) {
+        default Props wrapperStyle(final StyleProps wrapperStyle) {
             setWrapperStyle(wrapperStyle);
             return this;
         }

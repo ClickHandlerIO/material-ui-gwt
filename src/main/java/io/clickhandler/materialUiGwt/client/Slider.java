@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -25,7 +25,7 @@ public class Slider extends ExternalComponent<Slider.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Slider;
     }-*/;
 
@@ -42,7 +42,7 @@ public class Slider extends ExternalComponent<Slider.Props> {
 //        String name;
 //        boolean required;
 //        double step = 0.01; // the granularity slider can step through values
-//        CSSProps style;
+//        StyleProps style;
 //        FocusEventHandler onBlur; // func
 //        Func.Run onChange; // func
 //        Func.Run onDragStart; // func
@@ -117,10 +117,10 @@ public class Slider extends ExternalComponent<Slider.Props> {
         void setStep(double step);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         FocusEventHandler getOnBlur();
@@ -230,7 +230,7 @@ public class Slider extends ExternalComponent<Slider.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

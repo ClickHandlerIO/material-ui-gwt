@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -20,7 +20,7 @@ public class FontIcon extends ExternalComponent<FontIcon.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.FontIcon;
     }-*/;
 
@@ -30,7 +30,7 @@ public class FontIcon extends ExternalComponent<FontIcon.Props> {
 //        String className; // used to enter icon className, probably will work with our current icon enums
 //        String color;
 //        String hoverColor;
-//        CSSProps style; // ?
+//        StyleProps style; // ?
 //        MouseEventHandler onMouseEnter; // func
 //        MouseEventHandler onMouseLeave; // func
 //        MouseEventHandler onClick; // func - added in
@@ -55,10 +55,10 @@ public class FontIcon extends ExternalComponent<FontIcon.Props> {
         void setHoverColor(String hoverColor);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnMouseEnter();
@@ -102,7 +102,7 @@ public class FontIcon extends ExternalComponent<FontIcon.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

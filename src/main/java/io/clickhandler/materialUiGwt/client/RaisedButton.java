@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -23,13 +23,10 @@ public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
     }
 
     @Override
-    protected native ReactClass<RaisedButton.Props> reactClass() /*-{
+    protected native ReactClass<RaisedButton.Props> getReactClass() /*-{
         return $wnd.MaterialUi.RaisedButton;
     }-*/;
 
-    /**
-     *
-     */
     @JsType(isNative = true)
     public interface Props extends BaseProps {
         @JsProperty
@@ -99,10 +96,10 @@ public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
         void setLabelPosition(String labelPosition);
 
         @JsProperty
-        CSSProps getLabelStyle();
+        StyleProps getLabelStyle();
 
         @JsProperty
-        void setLabelStyle(CSSProps labelStyle);
+        void setLabelStyle(StyleProps labelStyle);
 
         @JsProperty
         boolean isLinkButton();
@@ -167,10 +164,10 @@ public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
         void setSecondary(boolean secondary);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         Func.Run getOnTouchTap();
@@ -249,7 +246,7 @@ public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
         }
 
         @JsOverlay
-        default Props labelStyle(CSSProps labelStyle) {
+        default Props labelStyle(StyleProps labelStyle) {
             setLabelStyle(labelStyle);
             return this;
         }
@@ -322,7 +319,7 @@ public class RaisedButton extends ExternalComponent<RaisedButton.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

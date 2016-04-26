@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -23,7 +23,7 @@ public class TableRowColumn extends ExternalComponent<TableRowColumn.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TableRowColumn;
     }-*/;
 
@@ -34,7 +34,7 @@ public class TableRowColumn extends ExternalComponent<TableRowColumn.Props> {
 //        int columnNumber;
 //        boolean hoverable;
 //        String key;
-//        CSSProps style;
+//        StyleProps style;
 //        MouseEventHandler onClick; // func
 //        MouseEventHandler onHover; // func
 //        MouseEventHandler onHoverExit; // func
@@ -64,10 +64,10 @@ public class TableRowColumn extends ExternalComponent<TableRowColumn.Props> {
         void setKey(String key);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -117,7 +117,7 @@ public class TableRowColumn extends ExternalComponent<TableRowColumn.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

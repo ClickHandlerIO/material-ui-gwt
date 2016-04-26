@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -23,7 +23,7 @@ public class TableFooter extends ExternalComponent<TableFooter.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TableFooter;
     }-*/;
 
@@ -31,7 +31,7 @@ public class TableFooter extends ExternalComponent<TableFooter.Props> {
     public interface Props extends BaseProps {
 //        boolean adjustForCheckbox;
 //        String className;
-//        CSSProps style;
+//        StyleProps style;
 //        MouseEventHandler onClick;
 
         @JsProperty
@@ -47,10 +47,10 @@ public class TableFooter extends ExternalComponent<TableFooter.Props> {
         void setClassName(String className);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -76,7 +76,7 @@ public class TableFooter extends ExternalComponent<TableFooter.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

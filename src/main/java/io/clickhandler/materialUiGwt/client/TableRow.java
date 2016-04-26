@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -23,7 +23,7 @@ public class TableRow extends ExternalComponent<TableRow.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TableRow;
     }-*/;
 
@@ -37,7 +37,7 @@ public class TableRow extends ExternalComponent<TableRow.Props> {
 //        boolean selectable;
 //        boolean selected;
 //        boolean striped;
-//        CSSProps style;
+//        StyleProps style;
 //        MouseEventHandler onCellClick; // func  - replace onClick
 //        MouseEventHandler onCellHover; // func
 //        MouseEventHandler onCellHoverExit; // func
@@ -94,10 +94,10 @@ public class TableRow extends ExternalComponent<TableRow.Props> {
         void setStriped(boolean striped);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         MouseEventHandler getOnCellClick();
@@ -189,7 +189,7 @@ public class TableRow extends ExternalComponent<TableRow.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

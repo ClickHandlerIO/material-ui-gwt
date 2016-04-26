@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -31,7 +31,7 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.CardTitle;
     }-*/;
 
@@ -40,13 +40,13 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
 //        boolean actAsExpander;
 //        boolean expandable;
 //        boolean showExpandableButton;
-//        CSSProps style; // ?
+//        StyleProps style; // ?
 //        ReactElement subtitle; // node
 //        String subtitleColor;
-//        CSSProps subtitleStyle; // ?
+//        StyleProps subtitleStyle; // ?
 //        ReactElement title; // node
 //        String titleColor;
-//        CSSProps titleStyle; // ?
+//        StyleProps titleStyle; // ?
 //        // MouseEventHandle onClick; // added in
 
 
@@ -69,10 +69,10 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         void setShowExpandableButton(boolean showExpandableButton);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         ReactElement getSubtitle();
@@ -87,10 +87,10 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         void setSubtitleColor(String subtitleColor);
 
         @JsProperty
-        CSSProps getSubtitleStyle();
+        StyleProps getSubtitleStyle();
 
         @JsProperty
-        void setSubtitleStyle(CSSProps subtitleStyle);
+        void setSubtitleStyle(StyleProps subtitleStyle);
 
         @JsProperty
         ReactElement getTitle();
@@ -105,10 +105,10 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         void setTitleColor(String titleColor);
 
         @JsProperty
-        CSSProps getTitleStyle();
+        StyleProps getTitleStyle();
 
         @JsProperty
-        void setTitleStyle(CSSProps titleStyle);
+        void setTitleStyle(StyleProps titleStyle);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -140,7 +140,7 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -158,7 +158,7 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         }
 
         @JsOverlay
-        default Props subtitleStyle(final CSSProps subtitleStyle) {
+        default Props subtitleStyle(final StyleProps subtitleStyle) {
             setSubtitleStyle(subtitleStyle);
             return this;
         }
@@ -176,7 +176,7 @@ public class CardTitle extends ExternalComponent<CardTitle.Props> {
         }
 
         @JsOverlay
-        default Props titleStyle(final CSSProps titleStyle) {
+        default Props titleStyle(final StyleProps titleStyle) {
             setTitleStyle(titleStyle);
             return this;
         }

@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -25,7 +25,7 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.SnackBar;
     }-*/;
 
@@ -33,11 +33,11 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
     public interface Props extends BaseProps {
 //        String action; // label for the action
 //        int autoHideDuration; // in ms
-//        CSSProps bodyStyle;
+//        StyleProps bodyStyle;
 //        String className;
 //        String message; //? node  - required
 //        boolean open; // required
-//        CSSProps style;
+//        StyleProps style;
 //        TouchEventHandler onActionTouchTap; // func
 //        Func.Run onRequestClose; // func
 //        MouseEventHandler onClick;
@@ -56,10 +56,10 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
         void setAutoHideDuration(int autoHideDuration);
 
         @JsProperty
-        CSSProps getBodyStyle();
+        StyleProps getBodyStyle();
 
         @JsProperty
-        void setBodyStyle(CSSProps bodyStyle);
+        void setBodyStyle(StyleProps bodyStyle);
 
         @JsProperty
         String getClassName();
@@ -80,10 +80,10 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
         void setOpen(boolean open);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         TouchEventHandler getOnActionTouchTap();
@@ -121,7 +121,7 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
         }
 
         @JsOverlay
-        default Props bodyStyle(final CSSProps bodyStyle) {
+        default Props bodyStyle(final StyleProps bodyStyle) {
             setBodyStyle(bodyStyle);
             return this;
         }
@@ -145,7 +145,7 @@ public class SnackBar extends ExternalComponent<SnackBar.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

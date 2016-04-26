@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -24,7 +24,7 @@ public class MenuItem extends ExternalComponent<MenuItem.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.MenuItem;
     }-*/;
 
@@ -58,10 +58,10 @@ public class MenuItem extends ExternalComponent<MenuItem.Props> {
         void setFocusState(String focusState);
 
         @JsProperty
-        CSSProps getInnerDivStyle();
+        StyleProps getInnerDivStyle();
 
         @JsProperty
-        void setInnerDivStyle(CSSProps innerDivStyle);
+        void setInnerDivStyle(StyleProps innerDivStyle);
 
         @JsProperty
         boolean isInsetChildren();
@@ -106,10 +106,10 @@ public class MenuItem extends ExternalComponent<MenuItem.Props> {
         void setSecondaryText(ReactElement secondaryText);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         Object getValue();
@@ -153,7 +153,7 @@ public class MenuItem extends ExternalComponent<MenuItem.Props> {
         }
 
         @JsOverlay
-        default Props innerDivStyle(CSSProps innerDivStyle) {
+        default Props innerDivStyle(StyleProps innerDivStyle) {
             setInnerDivStyle(innerDivStyle);
             return this;
         }
@@ -201,7 +201,7 @@ public class MenuItem extends ExternalComponent<MenuItem.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }

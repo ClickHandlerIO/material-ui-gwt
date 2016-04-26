@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.KeyboardEventHandler;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
@@ -23,7 +23,7 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.IconButton;
     }-*/;
 
@@ -51,10 +51,10 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         void setIconClassName(String iconClassName);
 
         @JsProperty
-        CSSProps getIconStyle();
+        StyleProps getIconStyle();
 
         @JsProperty
-        void setIconStyle(CSSProps iconStyle);
+        void setIconStyle(StyleProps iconStyle);
 
         @JsProperty
         FocusEventHandler getOnBlur();
@@ -95,10 +95,10 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         void setOnClick(MouseEventHandler onClick);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getTooltip();
@@ -113,10 +113,10 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         void setTooltipPosition(String tooltipPosition);
 
         @JsProperty
-        CSSProps getTooltipStyles();
+        StyleProps getTooltipStyles();
 
         @JsProperty
-        void setTooltipStyles(CSSProps tooltipStyles);
+        void setTooltipStyles(StyleProps tooltipStyles);
 
         @JsProperty
         boolean isTouch();
@@ -159,7 +159,7 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         }
 
         @JsOverlay
-        default Props iconStyle(CSSProps iconStyle) {
+        default Props iconStyle(StyleProps iconStyle) {
             setIconStyle(iconStyle);
             return this;
         }
@@ -202,7 +202,7 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -220,7 +220,7 @@ public class IconButton extends ExternalComponent<IconButton.Props> {
         }
 
         @JsOverlay
-        default Props tooltipStyles(CSSProps tooltipStyles) {
+        default Props tooltipStyles(StyleProps tooltipStyles) {
             setTooltipStyles(tooltipStyles);
             return this;
         }

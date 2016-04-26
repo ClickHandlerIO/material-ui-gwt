@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -22,7 +22,7 @@ public class ToolbarGroup extends ExternalComponent<ToolbarGroup.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.ToolbarGroup;
     }-*/;
 
@@ -34,7 +34,7 @@ public class ToolbarGroup extends ExternalComponent<ToolbarGroup.Props> {
 //        // invalid Variable name 'float' changed below
 //        String floatGroup; // enum 'left' 'right'
 //        boolean lastChild; // for last child right gap
-//        CSSProps style;
+//        StyleProps style;
 //        // not sure we want on onClick for the whole group
 
 
@@ -63,10 +63,10 @@ public class ToolbarGroup extends ExternalComponent<ToolbarGroup.Props> {
         void setLastChild(boolean lastChild);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
 
         ////////////////////
@@ -98,7 +98,7 @@ public class ToolbarGroup extends ExternalComponent<ToolbarGroup.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }

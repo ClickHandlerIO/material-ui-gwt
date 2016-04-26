@@ -1,7 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -24,7 +24,7 @@ public class Tabs extends ExternalComponent<Tabs.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.Tabs;
     }-*/;
 
@@ -58,10 +58,10 @@ public class Tabs extends ExternalComponent<Tabs.Props> {
         void setInitialSelectedIndex(double initialSelectedIndex);
 
         @JsProperty
-        CSSProps getInkBarStyle();
+        StyleProps getInkBarStyle();
 
         @JsProperty
-        void setInkBarStyle(CSSProps inkBarStyle);
+        void setInkBarStyle(StyleProps inkBarStyle);
 
         @JsProperty
         Func.Run getOnChange();
@@ -70,16 +70,16 @@ public class Tabs extends ExternalComponent<Tabs.Props> {
         void setOnChange(Func.Run onChange);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
-        CSSProps getTabItemContainerStyle();
+        StyleProps getTabItemContainerStyle();
 
         @JsProperty
-        void setTabItemContainerStyle(CSSProps tabItemContainerStyle);
+        void setTabItemContainerStyle(StyleProps tabItemContainerStyle);
 
         @JsProperty
         Object getTabTemplate();
@@ -129,7 +129,7 @@ public class Tabs extends ExternalComponent<Tabs.Props> {
         }
 
         @JsOverlay
-        default Props inkBarStyle(CSSProps inkBarStyle) {
+        default Props inkBarStyle(StyleProps inkBarStyle) {
             setInkBarStyle(inkBarStyle);
             return this;
         }
@@ -141,13 +141,13 @@ public class Tabs extends ExternalComponent<Tabs.Props> {
         }
 
         @JsOverlay
-        default Props style(CSSProps style) {
+        default Props style(StyleProps style) {
             setStyle(style);
             return this;
         }
 
         @JsOverlay
-        default Props tabItemContainerStyle(CSSProps tabItemContainerStyle) {
+        default Props tabItemContainerStyle(StyleProps tabItemContainerStyle) {
             setTabItemContainerStyle(tabItemContainerStyle);
             return this;
         }

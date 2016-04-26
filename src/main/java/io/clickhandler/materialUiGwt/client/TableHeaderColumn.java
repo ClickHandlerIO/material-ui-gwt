@@ -1,6 +1,6 @@
 package io.clickhandler.materialUiGwt.client;
 
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.MouseEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
@@ -23,7 +23,7 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.TableHeaderColumn;
     }-*/;
 
@@ -33,9 +33,9 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
 //        String className;
 //        double columnNumber;
 //        String key;
-//        CSSProps style;
+//        StyleProps style;
 //        String tooltip;
-//        CSSProps tooltipStyle;
+//        StyleProps tooltipStyle;
 //        MouseEventHandler onClick; // func
 
         @JsProperty
@@ -57,10 +57,10 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
         void setKey(String key);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
         String getTooltip();
@@ -69,10 +69,10 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
         void setTooltip(String tooltip);
 
         @JsProperty
-        CSSProps getTooltipStyle();
+        StyleProps getTooltipStyle();
 
         @JsProperty
-        void setTooltipStyle(CSSProps tooltipStyle);
+        void setTooltipStyle(StyleProps tooltipStyle);
 
         @JsProperty
         MouseEventHandler getOnClick();
@@ -104,7 +104,7 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
@@ -116,7 +116,7 @@ public class TableHeaderColumn extends ExternalComponent<TableHeaderColumn.Props
         }
 
         @JsOverlay
-        default Props tooltipStyle(final CSSProps tooltipStyle) {
+        default Props tooltipStyle(final StyleProps tooltipStyle) {
             setTooltipStyle(tooltipStyle);
             return this;
         }

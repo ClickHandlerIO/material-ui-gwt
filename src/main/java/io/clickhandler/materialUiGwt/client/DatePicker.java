@@ -2,7 +2,7 @@ package io.clickhandler.materialUiGwt.client;
 
 import com.google.gwt.core.client.JsDate;
 import io.clickhandler.reactGwt.client.Func;
-import io.clickhandler.reactGwt.client.dom.CSSProps;
+import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.FocusEventHandler;
 import io.clickhandler.reactGwt.client.event.TouchEventHandler;
 import io.clickhandler.reactGwt.client.react.BaseProps;
@@ -24,7 +24,7 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
     }
 
     @Override
-    protected native ReactClass<Props> reactClass() /*-{
+    protected native ReactClass<Props> getReactClass() /*-{
         return $wnd.MaterialUi.DatePicker;
     }-*/;
 
@@ -40,8 +40,8 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
 //        public String maxDate; // ?
 //        public String minDate; // ?
 //        public String mode; // enum 'portrait' 'landscape'
-//        public CSSProps style; // ?
-//        public CSSProps textFieldStyle; // ?
+//        public StyleProps style; // ?
+//        public StyleProps textFieldStyle; // ?
 //        public Object value; // any type
 //        public String valueLink; // ?
 //        public String wordings; // ?
@@ -118,16 +118,16 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
         void setMode(String mode);
 
         @JsProperty
-        CSSProps getStyle();
+        StyleProps getStyle();
 
         @JsProperty
-        void setStyle(CSSProps style);
+        void setStyle(StyleProps style);
 
         @JsProperty
-        CSSProps getTextFieldStyle();
+        StyleProps getTextFieldStyle();
 
         @JsProperty
-        void setTextFieldStyle(CSSProps textFieldStyle);
+        void setTextFieldStyle(StyleProps textFieldStyle);
 
         @JsProperty
         JsDate getValue();
@@ -266,13 +266,13 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
         }
 
         @JsOverlay
-        default Props style(final CSSProps style) {
+        default Props style(final StyleProps style) {
             setStyle(style);
             return this;
         }
 
         @JsOverlay
-        default Props textFieldStyle(final CSSProps textFieldStyle) {
+        default Props textFieldStyle(final StyleProps textFieldStyle) {
             setTextFieldStyle(textFieldStyle);
             return this;
         }
