@@ -13,7 +13,6 @@ public class MenuSvgIcon extends AbstractMaterialIcon {
 
     @Override
     protected native ReactClass<Props> getReactClass() /*-{
-        console.log($wnd.MaterialUi.Icons.Menu);
         return $wnd.MaterialUi.Icons.Menu;
     }-*/;
 }
