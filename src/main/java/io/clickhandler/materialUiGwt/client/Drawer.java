@@ -13,15 +13,15 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class LeftNav extends ExternalComponent<LeftNav.Props> {
+public class Drawer extends ExternalComponent<Drawer.Props> {
 
     @Inject
-    public LeftNav() {
+    public Drawer() {
     }
 
     @Override
     protected native ReactClass<Props> getReactClass() /*-{
-        return $wnd.MaterialUi.LeftNav;
+        return $wnd.MaterialUi.Drawer;
     }-*/;
 
     /**
