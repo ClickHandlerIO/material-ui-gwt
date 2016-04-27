@@ -31,24 +31,6 @@ public class Slider extends ExternalComponent<Slider.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        double defaultValue; // type valueInRangePropType
-//        double min; // must be between 0 and 1 inclusive, cannot equal max
-//        double max; // must be between 0 and 1 inclusive, cannot equal min
-//        double value; // the value of the slider
-//        String description;
-//        boolean disableFocusRipple;
-//        boolean disabled;
-//        String error;
-//        String name;
-//        boolean required;
-//        double step = 0.01; // the granularity slider can step through values
-//        StyleProps style;
-//        FocusEventHandler onBlur; // func
-//        Func.Run onCheck; // func
-//        Func.Run onDragStart; // func
-//        Func.Run onDragStop; // func
-//        FocusEventHandler onFocus; // func
-//        MouseEventHandler onClick; // func - may be unused as it is added in here only
 
         @JsProperty
         double getDefaultValue();

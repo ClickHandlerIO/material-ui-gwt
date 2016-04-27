@@ -30,32 +30,6 @@ public class DatePicker extends ExternalComponent<DatePicker.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        public boolean autoOk;
-//        public String container; // enum 'dialog' 'inline'
-//        public String defaultDate; // ?
-//        public boolean disableYearSelection;
-//        public boolean disabled;
-//        public int firstDayOfWeek; // default 0 - varies by locale
-//        public String locale;
-//        public String maxDate; // ?
-//        public String minDate; // ?
-//        public String mode; // enum 'portrait' 'landscape'
-//        public StyleProps style; // ?
-//        public StyleProps textFieldStyle; // ?
-//        public Object value; // any type
-//        public String valueLink; // ?
-//        public String wordings; // ?
-//
-//
-//        public Func.Run DateTimeFormat; // func
-//        public Func.Run formatDate; // func
-//        public Func.Run onCheck; // func
-//        public Func.Run onDismiss; // func
-//        public FocusEventHandler onFocus; // func
-//        public Func.Run onShow; // func
-//        public TouchEventHandler onTouchTap; // func
-//        public Func.Run shouldDisableDate; // func
-
 
         @JsProperty
         boolean isAutoOk();

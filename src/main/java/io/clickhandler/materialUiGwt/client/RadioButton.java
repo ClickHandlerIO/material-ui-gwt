@@ -1,6 +1,7 @@
 package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
+import io.clickhandler.reactGwt.client.Reflection;
 import io.clickhandler.reactGwt.client.dom.StyleProps;
 import io.clickhandler.reactGwt.client.event.SyntheticEvent;
 import io.clickhandler.reactGwt.client.react.BaseProps;

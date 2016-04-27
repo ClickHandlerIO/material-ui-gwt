@@ -33,27 +33,6 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        boolean autoWidth;
-//        boolean disabled;
-//        StyleProps errorStyle;
-//        ReactElement errorText; // node
-//        StyleProps floatingLabelStyle;
-//        ReactElement floatingLabelText;
-//        boolean fullWidth;
-//        StyleProps hintStyle;
-//        ReactElement hintText;
-//        StyleProps iconStyle;
-//        StyleProps labelStyle;
-//        String selectFieldRoot; // ?
-//        StyleProps style;
-//        String underlineDisabledStyle;
-//        String underlineFocusStyle;
-//        String underlineStyle;
-//        Object value; // any
-//        FocusEventHandler onBlur; // func
-//        Func.Run onCheck; // func
-//        FocusEventHandler onFocus; // func
-//        MouseEventHandler onClick; // func - added here, may not be used
 
         @JsProperty
         boolean isAutoWidth();

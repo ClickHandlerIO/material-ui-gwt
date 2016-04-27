@@ -31,19 +31,6 @@ public class DropDownMenu extends ExternalComponent<DropDownMenu.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        boolean autoWidth;
-//        String className;
-//        boolean disabled;
-//        StyleProps iconStyle;
-//        StyleProps labelStyle;
-//        double maxHeight = 500;
-//        StyleProps menuStyle;
-//        boolean openImmediately;
-//        StyleProps style;
-//        StyleProps underlineStyle;
-//        Object value;
-//        Func.Run onCheck; // func
-//        MouseEventHandler onClick; // func - added in, even though default opens and closes menu
 
         @JsProperty
         boolean isAutoWidth();
