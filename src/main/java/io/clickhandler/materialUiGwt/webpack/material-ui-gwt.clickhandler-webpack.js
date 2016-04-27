@@ -52,7 +52,7 @@ import ToolbarSeparator from "material-ui/Toolbar/ToolbarSeparator";
 import ToolbarTitle from "material-ui/Toolbar/ToolbarTitle";
 import Toggle from "material-ui/Toggle";
 import Typography from "material-ui/styles/typography";
-import RaisedButton from "material-ui/RadioButton";
+import RaisedButton from "material-ui/RaisedButton";
 import ZIndex from "material-ui/styles/zIndex";
 import AccountBoxSvgIcon from "material-ui/svg-icons/action/account-box";
 import AccountCircleSvgIcon from "material-ui/svg-icons/action/account-circle";
@@ -200,6 +200,8 @@ window.MaterialUi = {
         Typography: Typography,
         ZIndex: ZIndex
     },
+    DarkTheme: getMuiTheme(DarkBaseTheme),
+    LightTheme: getMuiTheme(LightBaseTheme),
     Utils: {
         ColorManipulator: ColorManipulator
     }
