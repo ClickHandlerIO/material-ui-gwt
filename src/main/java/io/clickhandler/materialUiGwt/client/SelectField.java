@@ -51,7 +51,7 @@ public class SelectField extends ExternalComponent<SelectField.Props> {
 //        String underlineStyle;
 //        Object value; // any
 //        FocusEventHandler onBlur; // func
-//        Func.Run onChange; // func
+//        Func.Run onCheck; // func
 //        FocusEventHandler onFocus; // func
 //        MouseEventHandler onClick; // func - added here, may not be used
 

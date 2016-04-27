@@ -44,7 +44,7 @@ public class Slider extends ExternalComponent<Slider.Props> {
 //        double step = 0.01; // the granularity slider can step through values
 //        StyleProps style;
 //        FocusEventHandler onBlur; // func
-//        Func.Run onChange; // func
+//        Func.Run onCheck; // func
 //        Func.Run onDragStart; // func
 //        Func.Run onDragStop; // func
 //        FocusEventHandler onFocus; // func

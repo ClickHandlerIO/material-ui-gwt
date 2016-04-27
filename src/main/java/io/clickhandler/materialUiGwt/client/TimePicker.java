@@ -30,18 +30,6 @@ public class TimePicker extends ExternalComponent<TimePicker.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        boolean autoOk;
-//        String defaultTime;
-//        String format; // enum 'ampm '24hr'
-//        boolean pedantic;
-//        StyleProps style; // ?
-//        StyleProps textFieldStyle; // ?
-//        Func.Run onChange; // func
-//        Func.Run onDismiss; // func
-//        FocusEventHandler onFocus; // func
-//        Func.Run onShow; // func
-//        TouchEventHandler onTouchTap; // func
-//        MouseEventHandler onClick;
 
         @JsProperty
         boolean isAutoOk();

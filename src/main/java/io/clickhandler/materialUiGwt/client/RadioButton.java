@@ -2,6 +2,7 @@ package io.clickhandler.materialUiGwt.client;
 
 import io.clickhandler.reactGwt.client.Func;
 import io.clickhandler.reactGwt.client.dom.StyleProps;
+import io.clickhandler.reactGwt.client.event.SyntheticEvent;
 import io.clickhandler.reactGwt.client.react.BaseProps;
 import io.clickhandler.reactGwt.client.react.ExternalComponent;
 import io.clickhandler.reactGwt.client.react.ReactClass;
@@ -29,15 +30,6 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
 
     @JsType(isNative = true)
     public interface Props extends BaseProps {
-//        boolean checked;
-//        boolean disabled;
-//        StyleProps iconStyle;
-//        String labelPosition; // enum 'left' 'right'
-//        StyleProps labelStyle;
-//        StyleProps style;
-//        String value;
-//        Func.Run onCheck; // func
-
 
         @JsProperty
         boolean isChecked();
@@ -140,6 +132,10 @@ public class RadioButton extends ExternalComponent<RadioButton.Props> {
             return this;
         }
 
-
+        @JsOverlay
+        default Props onCheck(final Func.Run2<SyntheticEvent, Boolean> onChange) {
+            Reflection.set(this, "onCheck", onChange);
+            return this;
+        }
     }
 }
