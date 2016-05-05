@@ -48,10 +48,10 @@ public class Popover extends ExternalComponent<Popover.Props> {
 
 
         @JsProperty
-        ReactElement getAnchorEl();
+        Object getAnchorEl();
 
         @JsProperty
-        void setAnchorEl(ReactElement anchorEl);
+        void setAnchorEl(Object anchorEl);
 
         @JsProperty
         Origin getAnchorOrigin();
